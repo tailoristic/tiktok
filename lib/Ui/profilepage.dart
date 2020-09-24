@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test12/Ui/widgets.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -157,23 +158,23 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(15.0, 450.0, 0.0, 0.0),
+            padding: EdgeInsets.fromLTRB(15.0, 440.0, 0.0, 0.0),
             child: Text(
               "Tap to add a bio to your profile ",
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 18.0,
                 color: Colors.white,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(15.0, 490.0, 0.0, 0.0),
+            padding: EdgeInsets.fromLTRB(15.0, 480.0, 0.0, 0.0),
             child: Row(
               children: [
                 Text(
                   "0",
                   style: TextStyle(
-                    fontSize: 25.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -192,7 +193,7 @@ class ProfilePage extends StatelessWidget {
                 Text(
                   "0",
                   style: TextStyle(
-                    fontSize: 25.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -211,7 +212,7 @@ class ProfilePage extends StatelessWidget {
                 Text(
                   "0",
                   style: TextStyle(
-                    fontSize: 25.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -227,14 +228,6 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15.0, 530.0, 15.0, 0.0),
-            child: Divider(
-              height: 20.0,
-              thickness: 0.6,
-              color: Colors.grey,
             ),
           ),
           Padding(
@@ -277,18 +270,47 @@ class ProfilePage extends StatelessWidget {
 
   _tabFoo() {
     return Container(
-      height: 50.0,
-      margin: EdgeInsets.fromLTRB(15.0, 560.0, 15.0, 0.0),
+      height: double.infinity,
+      margin: EdgeInsets.fromLTRB(15.0, 500.0, 15.0, 0.0),
       child: DefaultTabController(
         length: 2,
-        child: TabBar(indicatorColor: Color(0xFFECD713), tabs: [
-          Tab(
-            text: "Videos 0",
+        child: Scaffold(
+          backgroundColor: Color(0xFF111522),
+          appBar: AppBar(
+            toolbarHeight: 51.0,
+            backgroundColor: Color(0xFF111522),
+            bottom: TabBar(
+              indicatorColor: Color(0xFFECD713),
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 5.0,
+              tabs: [
+                Tab(
+                  text: "Videos 0",
+                ),
+                Tab(
+                  text: "Likes 0",
+                ),
+              ],
+            ),
           ),
-          Tab(
-            text: "Likes 0",
+          body: TabBarView(
+            children: [
+              Center(
+                child: TabCard(
+                  title: "Hello",
+                  color: Color(0xFF2F1047),
+                  textStyle: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Center(
+                child: Text("Demo"),
+              ),
+            ],
           ),
-        ]),
+        ),
       ),
     );
   }

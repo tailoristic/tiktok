@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var pages = [
     HomePage(),
     SearchPage(),
-    SearchPage(),
+    null,
     InboxPage(),
     ProfilePage(),
   ];
@@ -45,7 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
   _bottomNav() {
     return Container(
       height: 80.0,
-      margin: EdgeInsets.only(bottom: 10.0),
       child: BottomNavigationBar(
         backgroundColor: Color(0xFF222121),
         selectedItemColor: Colors.white,
