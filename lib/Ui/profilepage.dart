@@ -76,7 +76,7 @@ class ProfilePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.fromLTRB(15.0, 350.0, 0.0, 0.0),
             child: Text(
-              "Barry Alen",
+              "Barry Allen",
               style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
